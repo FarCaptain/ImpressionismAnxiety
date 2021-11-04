@@ -28,6 +28,8 @@ public class BreathGameplayController : MonoBehaviour
 
     private float timeCounter = 0.0f;
 
+    public FixedJoystick fixedJoystick; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +57,8 @@ public class BreathGameplayController : MonoBehaviour
             timeCounter = 0.0f;
             scoreDisplayUpdate();
         }
+
+        Debug.Log(fixedJoystick.Direction);
     }
 
     public void SetButtonOnHold(bool status)
