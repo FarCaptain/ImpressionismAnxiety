@@ -6033,6 +6033,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
         type: 3}
+      propertyPath: RewardOnScore
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
       propertyPath: InnerRingObject
       value: 
       objectReference: {fileID: 2076623637}

@@ -41,10 +41,11 @@ public class VanGoghEffect : MonoBehaviour {
     [Tooltip("generate mipmap for output texture")]
     public bool outputMipmap = false;
 
+    public float MasterFade = 0.00000f;
+    
+
     [Header("Effect")]
 
-    [Range(0.0f, 1.0f)]
-    public float MasterFade = 1.000000f;
     [Range(0.0f, 1.0f)]
     public float diffuseStrength = 0.200000f;
     [Range(0.0f, 5.0f)]
@@ -267,7 +268,7 @@ public class VanGoghEffect : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-    	
+    	MasterFade = 1.0f - Mathf.Clamp(BreathGameplayController.score, 0, 100) / 100.0f;
     }
 
     Texture getTexture(string name)

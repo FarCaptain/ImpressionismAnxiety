@@ -12,6 +12,7 @@ public class BreathGameplayController : MonoBehaviour
     public float InnerRingSize;
     public float InnerRingRange;
     public GameObject BreathRingObject;
+    public static int score =100;
 
     public GameObject ScoreTextObject;
 
@@ -21,7 +22,6 @@ public class BreathGameplayController : MonoBehaviour
     [SerializeField]
     private bool buttonOnHold = false;
     private RectTransform breathRingTrans;
-    private int score = 50;
     private Text scoreText;
     [SerializeField]
     private bool outerRingAsGoal = false;
@@ -51,7 +51,7 @@ public class BreathGameplayController : MonoBehaviour
         timeCounter += Time.deltaTime;
         if (timeCounter >= 1.0f)
         {
-            score--;
+            score-=2;
             timeCounter = 0.0f;
             scoreDisplayUpdate();
         }

@@ -14,6 +14,7 @@ public class UVScrolling : MonoBehaviour
         
         GetComponent<Renderer>().material.mainTextureOffset = new Vector2(OffsetX, OffsetY);
         gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_Anxiety", curAnxiety);
-        if( curAnxiety > 0 ) curAnxiety -= (Time.time/100.0f) ;
+        curAnxiety = Mathf.Clamp(BreathGameplayController.score, 0, 100);
+        // if( curAnxiety > 0 ) curAnxiety -= (Time.time/100.0f) ;
     }
 }
