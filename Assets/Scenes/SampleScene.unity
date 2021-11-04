@@ -3585,7 +3585,7 @@ MonoBehaviour:
   renderToTexture: 0
   outputTexture: {fileID: 0}
   outputMipmap: 0
-  MasterFade: 0.1
+  MasterFade: 0
   diffuseStrength: 0.642
   smearStrength: 0.7
   specularStrength: 0.6
@@ -6242,12 +6242,12 @@ PrefabInstance:
     - target: {fileID: 2539713818081388744, guid: b0206ff82e323ef4f8bbf058f9abf7a9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 531.3822
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 2539713818081388744, guid: b0206ff82e323ef4f8bbf058f9abf7a9,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 531.3822
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 2539713818081388744, guid: b0206ff82e323ef4f8bbf058f9abf7a9,
         type: 3}
@@ -6258,16 +6258,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -221
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539713818081388745, guid: b0206ff82e323ef4f8bbf058f9abf7a9,
+        type: 3}
+      propertyPath: edgeThickness
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2539713818098496453, guid: b0206ff82e323ef4f8bbf058f9abf7a9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 159.4146
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2539713818098496453, guid: b0206ff82e323ef4f8bbf058f9abf7a9,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 159.4146
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2539713818098496453, guid: b0206ff82e323ef4f8bbf058f9abf7a9,
         type: 3}
@@ -6278,6 +6283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -221
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539713818098496455, guid: b0206ff82e323ef4f8bbf058f9abf7a9,
+        type: 3}
+      propertyPath: edgeThickness
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0206ff82e323ef4f8bbf058f9abf7a9, type: 3}
