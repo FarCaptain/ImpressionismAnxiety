@@ -502,61 +502,18 @@ MonoBehaviour:
   player: {fileID: 609641193}
   mouseSensitivity: 200
   xRotation: 0
---- !u!1 &1097189101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1097189102}
-  - component: {fileID: 1097189103}
-  m_Layer: 0
-  m_Name: Breath Gameplay Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1097189102
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097189101}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1097189103
+--- !u!114 &1097189103 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2956930638938160647}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097189101}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 930f2e51bbd823a40b7ca95b32b9129c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OuterRingObject: {fileID: 2140156471}
-  OuterRingSize: 1000
-  OuterRingRange: 200
-  InnerRingObject: {fileID: 2090674484}
-  InnerRingSize: 300
-  InnerRingRange: 200
-  BreathRingObject: {fileID: 854157391}
-  ScoreTextObject: {fileID: 657977177}
-  ScalingRate: 200
-  RewardOnScore: 5
-  buttonOnHold: 0
-  outerRingAsGoal: 0
 --- !u!1001 &1830616122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -848,3 +805,92 @@ PrefabInstance:
       objectReference: {fileID: 1097189103}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0206ff82e323ef4f8bbf058f9abf7a9, type: 3}
+--- !u!1001 &2956930638938160647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: InnerRingObject
+      value: 
+      objectReference: {fileID: 2090674484}
+    - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: OuterRingObject
+      value: 
+      objectReference: {fileID: 2140156471}
+    - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: ScoreTextObject
+      value: 
+      objectReference: {fileID: 657977177}
+    - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: BreathRingObject
+      value: 
+      objectReference: {fileID: 854157391}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660137, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956930637841660138, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: m_Name
+      value: Breath Gameplay Controller
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ce1efd1a4f03184bb791494a95477a6, type: 3}
