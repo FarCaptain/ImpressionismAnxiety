@@ -9,6 +9,12 @@ public class CameraControl : MonoBehaviour
     private float joyStickX;
     public float sensitivity;
     public FixedJoystick fixedJoystick;
+    public GameObject QuickTurn;
+
+    private void Start()
+    {
+        QuickTurn.GetComponent<Button>().onClick.AddListener(HeyYa);
+    }
 
     private void Update(){
         joyStickX = fixedJoystick.Direction.x * sensitivity * Time.deltaTime;
@@ -19,5 +25,10 @@ public class CameraControl : MonoBehaviour
         player.Rotate(Vector3.up * joyStickX);
         Debug.Log(fixedJoystick.Direction);
         // transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+    }
+
+    private void HeyYa()
+    {
+        player.Rotate(Vector3.up * 180);
     }
 }
