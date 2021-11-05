@@ -3585,7 +3585,7 @@ MonoBehaviour:
   renderToTexture: 0
   outputTexture: {fileID: 0}
   outputMipmap: 0
-  MasterFade: 0.3
+  MasterFade: 0.66
   diffuseStrength: 0.642
   smearStrength: 0.7
   specularStrength: 0.6
@@ -4214,8 +4214,9 @@ GameObject:
   - component: {fileID: 1292811471}
   - component: {fileID: 1292811470}
   - component: {fileID: 1292811469}
+  - component: {fileID: 1292811473}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4292,12 +4293,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292811468}
   m_LocalRotation: {x: 0.7100109, y: -0, z: -0, w: 0.70419073}
-  m_LocalPosition: {x: -1.112, y: 4.774, z: -5.451}
-  m_LocalScale: {x: 0.4481336, y: 1, z: 0.27441055}
+  m_LocalPosition: {x: -1.5577087, y: 1.182035, z: -1.7770379}
+  m_LocalScale: {x: 0.16264251, y: 0.9998973, z: 0.109070644}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_Father: {fileID: 3786032995748366527}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90.47101, y: 0, z: 0}
+--- !u!114 &1292811473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292811468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4010caa9cda77b49b8bde0d1d999357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slide: {fileID: 1292811468}
+  textures:
+  - {fileID: 2800000, guid: ce6f5a605aab790419290899a218df19, type: 3}
+  - {fileID: 2800000, guid: cbeb7bc7355c19141b9fc8e1c2afe13c, type: 3}
+  - {fileID: 2800000, guid: bbd9ddd1edba3014286e488b3d9c7f2b, type: 3}
 --- !u!1001 &1328815362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6427,29 +6445,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ce1efd1a4f03184bb791494a95477a6, type: 3}
---- !u!205 &3786032995727809567
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3786032995748205727}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.0002784133, y: -0.0025072396, z: -0.006579049}
-  m_Size: 1.5181056
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.25
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 3786032995745942111}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 0}
-  m_Enabled: 0
 --- !u!33 &3786032995744942239
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6527,7 +6522,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3786032995748366527}
-  - component: {fileID: 3786032995727809567}
   m_Layer: 0
   m_Name: HDTV
   m_TagString: Untagged
@@ -6561,6 +6555,7 @@ Transform:
   m_LocalScale: {x: 2.7553287, y: 2.516, z: 1}
   m_Children:
   - {fileID: 3786032995748366525}
+  - {fileID: 1292811472}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
