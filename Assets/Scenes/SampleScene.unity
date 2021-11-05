@@ -3585,7 +3585,7 @@ MonoBehaviour:
   renderToTexture: 0
   outputTexture: {fileID: 0}
   outputMipmap: 0
-  MasterFade: 0
+  MasterFade: 0.3
   diffuseStrength: 0.642
   smearStrength: 0.7
   specularStrength: 0.6
@@ -3607,8 +3607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 609641193}
-  mouseSensitivity: 200
-  xRotation: 0
+  sensitivity: 300
+  fixedJoystick: {fileID: 1968414541}
 --- !u!1001 &979088065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6313,7 +6313,7 @@ PrefabInstance:
     - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
         type: 3}
       propertyPath: ScalingRate
-      value: 120
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
         type: 3}
@@ -6324,11 +6324,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OuterRingSize
       value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
-        type: 3}
-      propertyPath: ScalingRate
-      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
         type: 3}
