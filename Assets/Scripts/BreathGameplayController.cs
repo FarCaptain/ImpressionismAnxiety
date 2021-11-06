@@ -33,6 +33,24 @@ public class BreathGameplayController : MonoBehaviour
     public Camera Cam;
     public string PopupTag;
 
+    public List<GameObject> PopupObjects;
+
+    [SerializeField]
+    private int livePopupsCount;
+
+    public float popupsSpawnMaxTime;
+    public float popupsSpawnMinTime;
+
+    private float popupsSpawnTimeLeft;
+
+    public int popupsSpawnMaxAmount;
+    public int popupsSpanwMinAmount;
+
+    private float popupsSpawnNextAmount;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +64,12 @@ public class BreathGameplayController : MonoBehaviour
         InnerRingObject.GetComponent<CircleGraphic>().color = new Color(1.0f, 0.0f, 0.0f, 0.5f);
         OuterRingObject.GetComponent<CircleGraphic>().color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
         scoreDisplayUpdate();
+
+        foreach (GameObject popup in PopupObjects)
+        {
+            popup.SetActive(false);
+            livePopupsCount = 0;
+        }
     }
 
     // Update is called once per frame
@@ -143,10 +167,16 @@ public class BreathGameplayController : MonoBehaviour
                     if (hit.collider != null && hit.collider.gameObject.tag == PopupTag)
                     {
                         hit.collider.gameObject.SetActive(false);
+                        livePopupsCount--;
                     }
                 }
             }
         }
+    } 
+
+    private void popupsRespawn()
+    {
+
     }
 
 }
