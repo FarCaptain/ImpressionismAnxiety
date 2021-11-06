@@ -23,7 +23,7 @@ public class CameraControl : MonoBehaviour
         // xRotation = Mathf.Clamp(xRotation, -10f, 10f);
 
         player.Rotate(Vector3.up * joyStickX);
-        Debug.Log(fixedJoystick.Direction);
+        //Debug.Log(fixedJoystick.Direction);
         // transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
     }
 

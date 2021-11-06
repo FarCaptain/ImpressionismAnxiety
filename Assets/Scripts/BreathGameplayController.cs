@@ -28,6 +28,9 @@ public class BreathGameplayController : MonoBehaviour
 
     private float timeCounter = 0.0f;
 
+    public Camera Cam;
+    public string PopupTag;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +49,8 @@ public class BreathGameplayController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        touchPopup();
+
         if ((breathRingTrans.sizeDelta.x < OuterRingSize && buttonOnHold) || (breathRingTrans.sizeDelta.x > (InnerRingSize - InnerRingRange) && !buttonOnHold)) breathRingScaling(buttonOnHold, Time.deltaTime);
         
         timeCounter += Time.deltaTime;
@@ -117,6 +122,29 @@ public class BreathGameplayController : MonoBehaviour
     private void scoreDisplayUpdate()
     {
         scoreText.text = score.ToString();
+    }
+
+    private void touchPopup()
+    {
+        Debug.Log("touchCount:" + Input.touchCount);
+        if (Input.touchCount > 0)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                Ray ray = Cam.ScreenPointToRay(Input.GetTouch(i).position);
+                //Debug.Log("Ray:" + ray.direction);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                {
+                    Debug.Log("rayCast:" + hit.collider.gameObject.name);
+
+                    if (hit.collider != null && hit.collider.gameObject.tag == PopupTag)
+                    {
+                        hit.collider.gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
     }
 
 }

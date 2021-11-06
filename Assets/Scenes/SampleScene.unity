@@ -922,6 +922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246808291}
   - component: {fileID: 246808292}
+  - component: {fileID: 246808293}
   m_Layer: 0
   m_Name: popup5
   m_TagString: Popups
@@ -994,6 +995,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &246808293
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246808290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.000002, y: 3.33, z: 0.20000008}
+  m_Center: {x: 0.000000834465, y: 0.00000047683716, z: 0.0000019073486}
 --- !u!1001 &251117438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3635,6 +3649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 929248764}
   - component: {fileID: 929248765}
+  - component: {fileID: 929248766}
   m_Layer: 0
   m_Name: popup1
   m_TagString: Popups
@@ -3707,6 +3722,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &929248766
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929248763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.000002, y: 3.33, z: 0.2000005}
+  m_Center: {x: 0.0000009536743, y: -0.0000009536743, z: 0.000002861023}
 --- !u!1001 &936261823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3898,7 +3926,7 @@ MonoBehaviour:
   renderToTexture: 0
   outputTexture: {fileID: 0}
   outputMipmap: 0
-  MasterFade: 0.38
+  MasterFade: 1
   diffuseStrength: 0.642
   smearStrength: 0.7
   specularStrength: 0.6
@@ -4017,6 +4045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006552498}
   - component: {fileID: 1006552499}
+  - component: {fileID: 1006552500}
   m_Layer: 0
   m_Name: popup3
   m_TagString: Popups
@@ -4089,6 +4118,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1006552500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006552497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.000005, y: 3.330002, z: 0.20000228}
+  m_Center: {x: -0.00000047683716, y: 0.0000019073486, z: -0.0000038146973}
 --- !u!1 &1008043602
 GameObject:
   m_ObjectHideFlags: 0
@@ -4099,6 +4141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1008043603}
   - component: {fileID: 1008043604}
+  - component: {fileID: 1008043605}
   m_Layer: 0
   m_Name: popup6
   m_TagString: Popups
@@ -4171,6 +4214,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1008043605
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008043602}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.000002, y: 3.33, z: 0.20000023}
+  m_Center: {x: 0.0000009536743, y: 0.00000047683716, z: -0.0000019073486}
 --- !u!1001 &1066241738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4271,6 +4327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1070886561}
   - component: {fileID: 1070886562}
+  - component: {fileID: 1070886563}
   m_Layer: 0
   m_Name: popup2
   m_TagString: Popups
@@ -4343,6 +4400,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1070886563
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070886560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.0000043, y: 3.3300023, z: 0.2000025}
+  m_Center: {x: -0.0000019073486, y: 0.00000333786, z: -0.0000019073486}
 --- !u!1001 &1129460820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6137,6 +6207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740437516}
   - component: {fileID: 1740437517}
+  - component: {fileID: 1740437518}
   m_Layer: 0
   m_Name: popup4
   m_TagString: Popups
@@ -6209,6 +6280,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1740437518
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740437515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.0000024, y: 3.33, z: 0.20000024}
+  m_Center: {x: 0.00000047683716, y: 0, z: 0.0000009536743}
 --- !u!1001 &1777287975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6873,7 +6957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -937, y: -43}
+  m_AnchoredPosition: {x: -861, y: 130}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097316145
@@ -7214,6 +7298,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: Cam
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
+        type: 3}
+      propertyPath: PopupTag
+      value: Popups
+      objectReference: {fileID: 0}
     - target: {fileID: 2956930637841660136, guid: 6ce1efd1a4f03184bb791494a95477a6,
         type: 3}
       propertyPath: ScalingRate
