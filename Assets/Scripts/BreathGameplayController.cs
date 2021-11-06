@@ -13,6 +13,8 @@ public class BreathGameplayController : MonoBehaviour
     public float InnerRingRange;
     public GameObject BreathRingObject;
     public static int score =100;
+    public int MaxScore = 100;
+    public int MinScore = 0;
 
     public GameObject ScoreTextObject;
 
@@ -27,6 +29,9 @@ public class BreathGameplayController : MonoBehaviour
     private bool outerRingAsGoal = false;
 
     private float timeCounter = 0.0f;
+
+    public Camera Cam;
+    public string PopupTag;
 
     // Start is called before the first frame update
     void Start()
@@ -46,12 +51,14 @@ public class BreathGameplayController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        touchPopup();
+
         if ((breathRingTrans.sizeDelta.x < OuterRingSize && buttonOnHold) || (breathRingTrans.sizeDelta.x > (InnerRingSize - InnerRingRange) && !buttonOnHold)) breathRingScaling(buttonOnHold, Time.deltaTime);
         
         timeCounter += Time.deltaTime;
         if (timeCounter >= 1.0f)
         {
-            score-=2;
+            score = Mathf.Clamp(score - 2, MinScore, MaxScore);
             timeCounter = 0.0f;
             scoreDisplayUpdate();
         }
@@ -110,13 +117,36 @@ public class BreathGameplayController : MonoBehaviour
 
     private void scoreIncrease()
     {
-        score += RewardOnScore;
+        score = Mathf.Clamp(score + RewardOnScore, MinScore, MaxScore);
         scoreDisplayUpdate();
     }
 
     private void scoreDisplayUpdate()
     {
         scoreText.text = score.ToString();
+    }
+
+    private void touchPopup()
+    {
+        //Debug.Log("touchCount:" + Input.touchCount);
+        if (Input.touchCount > 0)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                Ray ray = Cam.ScreenPointToRay(Input.GetTouch(i).position);
+                //Debug.Log("Ray:" + ray.direction);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                {
+                    //Debug.Log("rayCast:" + hit.collider.gameObject.name);
+
+                    if (hit.collider != null && hit.collider.gameObject.tag == PopupTag)
+                    {
+                        hit.collider.gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
     }
 
 }
