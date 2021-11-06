@@ -44,7 +44,7 @@ public class GlitchingSlides : MonoBehaviour
             timeCounter += Time.deltaTime;
             if (timeCounter >= 1.0f)
             {
-                BreathGameplayController.score -=2;
+                BreathGameplayController.score = Mathf.Clamp(BreathGameplayController.score - 2, 0, 100);
                 timeCounter = 0.0f;
             }
             

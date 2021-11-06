@@ -13,6 +13,8 @@ public class BreathGameplayController : MonoBehaviour
     public float InnerRingRange;
     public GameObject BreathRingObject;
     public static int score =100;
+    public int MaxScore = 100;
+    public int MinScore = 0;
 
     public GameObject ScoreTextObject;
 
@@ -56,7 +58,7 @@ public class BreathGameplayController : MonoBehaviour
         timeCounter += Time.deltaTime;
         if (timeCounter >= 1.0f)
         {
-            score-=2;
+            score = Mathf.Clamp(score - 2, MinScore, MaxScore);
             timeCounter = 0.0f;
             scoreDisplayUpdate();
         }
@@ -115,7 +117,7 @@ public class BreathGameplayController : MonoBehaviour
 
     private void scoreIncrease()
     {
-        score += RewardOnScore;
+        score = Mathf.Clamp(score + RewardOnScore, MinScore, MaxScore);
         scoreDisplayUpdate();
     }
 
@@ -126,7 +128,7 @@ public class BreathGameplayController : MonoBehaviour
 
     private void touchPopup()
     {
-        Debug.Log("touchCount:" + Input.touchCount);
+        //Debug.Log("touchCount:" + Input.touchCount);
         if (Input.touchCount > 0)
         {
             for (int i = 0; i < Input.touchCount; i++)
@@ -136,7 +138,7 @@ public class BreathGameplayController : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity))
                 {
-                    Debug.Log("rayCast:" + hit.collider.gameObject.name);
+                    //Debug.Log("rayCast:" + hit.collider.gameObject.name);
 
                     if (hit.collider != null && hit.collider.gameObject.tag == PopupTag)
                     {
