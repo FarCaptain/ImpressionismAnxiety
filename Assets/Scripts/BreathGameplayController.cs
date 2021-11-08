@@ -18,8 +18,25 @@ public class BreathGameplayController : MonoBehaviour
 
     public GameObject ScoreTextObject;
 
+    // 100: 100~60 60~30 30~0
+    // 250~=4s/ 400 / 600
     public float ScalingRate;
     public int RewardOnScore;
+
+    // audios
+    private AudioSource InhaleAudio;
+    private AudioSource ExhaleAudio;
+    
+    public AudioSource InhaleAudioShort;
+    public AudioSource ExhaleAudioShort;
+
+    public AudioSource InhaleAudioMid;
+    public AudioSource ExhaleAudioMid;
+
+    public AudioSource InhaleAudioLong;
+    public AudioSource ExhaleAudioLong;
+    
+
 
     [SerializeField]
     private bool buttonOnHold = false;
@@ -76,6 +93,28 @@ public class BreathGameplayController : MonoBehaviour
     void Update()
     {
         touchPopup();
+        
+        if(score < 30)
+        {
+            ScalingRate = 600;
+            RewardOnScore = 1;
+            InhaleAudio = InhaleAudioShort;
+            ExhaleAudio = ExhaleAudioShort;
+        }
+        else if(score < 60)
+        {
+            ScalingRate = 300;
+            RewardOnScore = 3;
+            InhaleAudio = InhaleAudioMid;
+            ExhaleAudio = ExhaleAudioMid;
+        }
+        else
+        {
+            ScalingRate = 150;
+            RewardOnScore = 4;
+            InhaleAudio = InhaleAudioLong;
+            ExhaleAudio = ExhaleAudioLong;
+        }
 
         if ((breathRingTrans.sizeDelta.x < OuterRingSize && buttonOnHold) || (breathRingTrans.sizeDelta.x > (InnerRingSize - InnerRingRange) && !buttonOnHold)) breathRingScaling(buttonOnHold, Time.deltaTime);
         
@@ -94,11 +133,15 @@ public class BreathGameplayController : MonoBehaviour
 
         if (!buttonOnHold && outerRingAsGoal && inGoalRange())
         {
+            // exhale
+            ExhaleAudio.Play();
             switchGoal();
             scoreIncrease();
         }
         else if (buttonOnHold && !outerRingAsGoal && inGoalRange())
         {
+            // inhale
+            InhaleAudio.Play();
             switchGoal();
             scoreIncrease();
         }
