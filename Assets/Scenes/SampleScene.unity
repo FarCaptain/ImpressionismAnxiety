@@ -7187,7 +7187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1815447441}
   m_Layer: 0
-  m_Name: Audios
+  m_Name: AudioMagician
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
