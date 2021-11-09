@@ -145,7 +145,7 @@ public class BreathGameplayController : MonoBehaviour
         timeCounter += Time.fixedDeltaTime;
         if (timeCounter >= 1.0f)
         {
-            int punishment = (2 + (int)Mathf.Round(ActivePopupObjects.Count * activePopupsPunishmentRate));
+            int punishment = (timePunishment + (int)Mathf.Round(ActivePopupObjects.Count * activePopupsPunishmentRate));
             //Debug.Log("punishment: " + punishment.ToString());
             score = Mathf.Clamp((score - punishment), MinScore, MaxScore);
             timeCounter = 0.0f;
