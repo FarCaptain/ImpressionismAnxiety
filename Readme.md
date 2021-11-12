@@ -2,4 +2,4 @@ Glossophobia: A game prototype about Glossophobia ( a phobia characterized by a 
 
 Keep breathing in rhythm to stay calm.
 
-![screenshot](https://github.com/FarCaptain/ImpressionismAnxiety/scene.gif)
+![.](scene.gif)
